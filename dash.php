@@ -1,8 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Vinit Shahdeo">
+<meta name="email" content="vinitshahdeo@gmail.com">
+<meta name="copyright" content="Vinit Shahdeo 2019"/>
+
 
 <title>VinnoavteIT || DASHBOARD </title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -13,7 +17,8 @@
  <script src="js/jquery.js" type="text/javascript"></script>
 
   <script src="js/bootstrap.min.js"  type="text/javascript"></script>
- 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <script>
 $(function () {
@@ -411,5 +416,89 @@ echo '</table></div>';
 
 </div><!--container closed-->
 </div></div>
+<!--Footer start-->
+<div class="row footer">
+<div class="col-md-3 box">
+<a href="https://github.com/vinitshahdeo" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;GitHub</a>
+</div>
+<div class="col-md-3 box">
+<a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Admin Login</a></div>
+<div class="col-md-3 box">
+<a href="#" data-toggle="modal" data-target="#developers"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;Developer</a>
+</div>
+<div class="col-md-3 box">
+<a href="feedback.php" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Feedback</a></div></div>
+<!-- Modal For Developers-->
+<div class="modal fade title1" id="developers">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" style="font-family:'typo' "><span style="color:orange">Meet the Developer!</span></h4>
+      </div>
+
+      <div class="modal-body">
+        <p>
+		<div class="row">
+		<div class="col-md-4">
+		 <img src="image/vinitshahdeo.jpg" width=150 height=150 alt="Vinit Shahdeo" class="img-rounded">
+		 </div>
+		 <div class="col-md-5">
+		<a href="https://www.facebook.com/vinit.shahdeo" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook"><i class="fa fa-user"></i>&nbsp;Vinit Shahdeo</a>
+		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1"><i class="fa fa-phone"></i>&nbsp; +918870855940</h4>
+		<h4 style="font-family:'typo' "><i class="fa fa-envelope"></i>&nbsp; vinitshahdeo@gmail.com</h4>
+		<h4 style="font-family:'typo' "><i class="fa fa-map-marker"></i>&nbsp; VIT University ,Vellore</h4>
+
+    </div></div>
+    <br>
+    <div class="modal-footer">
+  <div class="btn-group btn-group-justified">
+    <a href="https://github.com/vinitshahdeo" class="btn btn-default"><i class="fa fa-github"></i></a>
+    <a href="https://www.facebook.com/vinit.shahdeo" class="btn btn-default"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/vinitshahdeo/" class="btn btn-default"><i class="fa fa-linkedin"></i></a>
+    <a href="https://twitter.com/Vinit_Shahdeo" class="btn btn-default"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/vinitshahdeo/" class="btn btn-default"><i class="fa fa-instagram"></i></a>
+</div>
+      </div>
+
+		</p>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--Modal for admin login-->
+	 <div class="modal fade" id="login">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title"><span style="color:orange;font-family:'typo' ">LOGIN</span></h4>
+      </div>
+      <div class="modal-body title1">
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<form role="form" method="post" action="admin.php?q=index.php">
+<div class="form-group">
+<input type="text" name="uname" maxlength="20"  placeholder="Admin user id" class="form-control"/>
+</div>
+<div class="form-group">
+<input type="password" name="password" maxlength="15" placeholder="Password" class="form-control"/>
+</div>
+<div class="form-group" align="center">
+<input type="submit" name="login" value="Login" class="btn btn-primary" />
+</div>
+</form>
+</div><div class="col-md-3"></div></div>
+      </div>
+      <!--<div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>-->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--footer end-->
 </body>
 </html>

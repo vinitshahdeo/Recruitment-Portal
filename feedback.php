@@ -1,7 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="Vinit Shahdeo">
+<meta name="email" content="vinitshahdeo@gmail.com">
+<meta name="copyright" content="Vinit Shahdeo 2019"/>
 <title>VinnovateIT - FEEDBACK </title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
  <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>    
@@ -100,7 +103,7 @@ You can send us your feedback through e-mail on the following e-mail id:<br />
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-10">
-<a href="mailto:yashnajawarani@gmail.com" style="color:#000000">yashnajawarani@gmail.com</a><br /><br />
+<a href="mailto:vinitshahdeo@gmail.com" style="color:#000000">vinitshahdeo@gmail.com</a><br /><br />
 </div><div class="col-md-1"></div></div>
 <p>Or you can directly submit your feedback by filling the enteries below:-</p>
 <form role="form"  method="post" action="feed.php?q=feedback.php">
@@ -165,12 +168,12 @@ You can send us your feedback through e-mail on the following e-mail id:<br />
         <p>
     <div class="row">
     <div class="col-md-4">
-     <img src="image/vnt.jpg" width=100 height=100 alt="Sunny Prakash Tiwari" class="img-rounded">
+     <img src="image/vnt.jpg" width=100 height=100 alt="Vinit Shahdeo" class="img-rounded">
      </div>
      <div class="col-md-5">
-    <a href="https://www.facebook.com/vinitshahdeo" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook"><i class="fa fa-user"></i>&nbsp;Yashna Jawrani</a>
-    <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1"><i class="fa fa-phone"></i>&nbsp; +917785068889</h4>
-    <h4 style="font-family:'typo' "><i class="fa fa-envelope"></i>&nbsp; yashna@gmail.com</h4>
+    <a href="https://www.facebook.com/vinitshahdeo" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook"><i class="fa fa-user"></i>&nbsp;Vinit Shahdeo</a>
+    <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1"><i class="fa fa-phone"></i>&nbsp; +91-8870855940</h4>
+    <h4 style="font-family:'typo' "><i class="fa fa-envelope"></i>&nbsp; vinitshahdeo@gmail.com</h4>
     <h4 style="font-family:'typo' "><i class="fa fa-map-marker"></i>&nbsp; VIT University ,Vellore</h4>
    
     </div></div>

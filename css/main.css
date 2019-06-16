@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 body
 {
 overflow-x:hidden;
 width:100%;
-font: 15px "Century Gothic", "Times Roman", sans-serif;
+font: 15px "Montserrat", "Century Gothic", "Times Roman", sans-serif;
 background:#eee;
 min-height:550px;
 background-attachment:fixed;

@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 
 <meta charset="UTF-8">
@@ -7,11 +7,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content=" VinnovateIT is official Innovation Lab of VIT University. ">
-<meta name="author" content="Yashna Jawrani">
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="author" content="Vinit Shahdeo">
+<meta name="email" content="vinitshahdeo@gmail.com">
+<meta name="copyright" content="Vinit Shahdeo 2019"/>
 
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
  <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>
@@ -40,7 +38,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="col-lg-6">
 <span class="logo">VinnnovateIT Recruitment</span></div>
 <div class="col-md-2 col-md-offset-4">
-<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Signin</b></span></a></div>
+<a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Sign in</b></span></a></div>
 <!--sign in modal start-->
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
@@ -159,7 +157,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="form-group">
   <label class="col-md-12control-label" for="cpassword"></label>
   <div class="col-md-12">
-    <input id="cpassword" name="cpassword" placeholder="Conform Password" class="form-control input-md" type="password">
+    <input id="cpassword" name="cpassword" placeholder="Confirm Password" class="form-control input-md" type="password">
 
   </div>
 </div>
@@ -182,41 +180,52 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <!--Footer start-->
 <div class="row footer">
 <div class="col-md-3 box">
-<a href="http://www.facebook.com/yashna.jawrani" target="_blank">About</a>
+<a href="https://vinnovateit.com/" target="_blank"><i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;About</a>
 </div>
 <div class="col-md-3 box">
-<a href="#" data-toggle="modal" data-target="#login">Admin Login</a></div>
+<a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Admin Login</a></div>
 <div class="col-md-3 box">
-<a href="#" data-toggle="modal" data-target="#developers">Developer</a>
+<a href="#" data-toggle="modal" data-target="#developers"><i class="fa fa-code" aria-hidden="true"></i>
+&nbsp;Developer</a>
 </div>
 <div class="col-md-3 box">
-<a href="feedback.php" target="_blank">Feedback</a></div></div>
+<a href="https://github.com/vinitshahdeo" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></div></div>
 <!-- Modal For Developers-->
 <div class="modal fade title1" id="developers">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" style="font-family:'typo' "><span style="color:orange">Developer</span></h4>
+        <h4 class="modal-title" style="font-family:'typo' "><span style="color:orange">Say Hi to Developer!</span></h4>
       </div>
 
       <div class="modal-body">
-        <p>
 		<div class="row">
 		<div class="col-md-4">
-		 <img src="image/vinit.jpg" width=100 height=100 alt="Vinit Shahdeo" class="img-rounded">
+		 <img src="image/vinitshahdeo.jpg" width=150 height=150 alt="Vinit Shahdeo" class="img-rounded">
 		 </div>
-		 <div class="col-md-5">
+		 <div class="col-md-8">
 		<a href="https://www.facebook.com/vinit.shahdeo" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook"><i class="fa fa-user"></i>&nbsp;Vinit Shahdeo</a>
-		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1"><i class="fa fa-phone"></i>&nbsp; +918870855940</h4>
+		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1"><i class="fa fa-phone"></i>&nbsp; +91-8870855940</h4>
 		<h4 style="font-family:'typo' "><i class="fa fa-envelope"></i>&nbsp; vinitshahdeo@gmail.com</h4>
-		<h4 style="font-family:'typo' "><i class="fa fa-map-marker"></i>&nbsp; VIT University ,Vellore</h4>
-
-    </div></div>
+		<h4 style="font-family:'typo' "><i class="fa fa-map-marker"></i>&nbsp; VIT University, Vellore</h4>
     <br><br><br>
+    </div>
     
+    </div>
+    <div class="modal-footer">
+    <div class="row">
+  <div class="btn-group btn-group-justified">
+    <a href="https://github.com/vinitshahdeo" class="btn btn-default"><i class="fa fa-github"></i></a>
+    <a href="https://www.facebook.com/vinit.shahdeo" class="btn btn-default"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/vinitshahdeo/" class="btn btn-default"><i class="fa fa-linkedin"></i></a>
+    <a href="https://twitter.com/Vinit_Shahdeo" class="btn btn-default"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/vinitshahdeo/" class="btn btn-default"><i class="fa fa-instagram"></i></a>
+  </div>
+</div>
+</div>
 
-		</p>
+
       </div>
 
     </div><!-- /.modal-content -->
@@ -237,7 +246,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="col-md-6">
 <form role="form" method="post" action="admin.php?q=index.php">
 <div class="form-group">
-<input type="text" name="uname" maxlength="20"  placeholder="Admin user id" class="form-control"/>
+<input type="text" name="uname" maxlength="30"  placeholder="Admin user id" class="form-control"/>
 </div>
 <div class="form-group">
 <input type="password" name="password" maxlength="15" placeholder="Password" class="form-control"/>

@@ -1,8 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Vinit Shahdeo">
+<meta name="email" content="vinitshahdeo@gmail.com">
+<meta name="copyright" content="Vinit Shahdeo 2019"/>
 
 <title>VinnovateIT - Recruitments</title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -249,15 +252,16 @@ echo '</table></div>';}
 <!--Footer start-->
 <div class="row footer">
 <div class="col-md-3 box">
-<a href="http://www.github.com/vinitshahdeo" target="_blank">About us</a>
+<a href="https://github.com/vinitshahdeo" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;GitHub</a>
 </div>
 <div class="col-md-3 box">
-<a href="#" data-toggle="modal" data-target="#login">Admin Login</a></div>
+<a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Admin Login</a></div>
 <div class="col-md-3 box">
-<a href="#" data-toggle="modal" data-target="#developers">Developer</a>
+<a href="#" data-toggle="modal" data-target="#developers"><i class="fa fa-code" aria-hidden="true"></i>
+&nbsp;Developer</a>
 </div>
 <div class="col-md-3 box">
-<a href="feedback.php" target="_blank">Feedback</a></div></div>
+<a href="feedback.php" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Feedback</a></div></div>
 <div class="modal fade title1" id="developers">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -270,11 +274,11 @@ echo '</table></div>';}
         <p>
     <div class="row">
     <div class="col-md-4">
-     <img src="image/vnt.jpg" width=100 height=100 alt="Sunny Prakash Tiwari" class="img-rounded">
+     <img src="image/vnt.jpg" width=100 height=100 alt="Vinit Shahdeo" class="img-rounded">
      </div>
      <div class="col-md-5">
     <a href="https://www.facebook.com/vinitshahdeo" style="color:#202020; font-family:'typo' ; font-size:18px" title="Find on Facebook"><i class="fa fa-user"></i>&nbsp;Vinit Shahdeo</a>
-    <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1"><i class="fa fa-phone"></i>&nbsp; +917785068889</h4>
+    <h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1"><i class="fa fa-phone"></i>&nbsp; +91-8870855940</h4>
     <h4 style="font-family:'typo' "><i class="fa fa-envelope"></i>&nbsp; vinitshahdeo@gmail.com</h4>
     <h4 style="font-family:'typo' "><i class="fa fa-map-marker"></i>&nbsp; VIT University ,Vellore</h4>
     <a href="https://www.facebook.com/vinitshahdeo" target="_blank"><i style="color:orange; font-size: 24px;" class="fa fa-facebook"></i><a/>
