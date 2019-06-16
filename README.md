@@ -50,6 +50,8 @@ The source code of this project is written in **PHP**. So, you'll require **WAMP
 
 4. Run **`localhost/{YOUR FOLDER NAME}`**
 
+> Check UI screenshots inside `screenshots` folder.
+
 ## Need help?
 
 Feel free to contact me via [Facebook](https://www.facebook.com/vinit.shahdeo).
@@ -69,5 +71,5 @@ Invite me to connect on [LinkedIn](https://www.linkedin.com/in/vinitshahdeo/).
 
 Thank you for being here! Show some love by [starring](https://github.com/vinitshahdeo/Recruitment-Portal/) this repo.
 
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/vinitshahdeo/Recruitment-Portal.svg?style=social)](https://twitter.com/intent/tweet?text=Library%20Management%20System%20by@Vinit_Shahdeo%20:&url=https://github.com/vinitshahdeo/Library-Management-System)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/vinitshahdeo/Recruitment-Portal.svg?style=social)](https://twitter.com/intent/tweet?text=Recruitment%20Portal%20by@Vinit_Shahdeo%20:&url=https://github.com/vinitshahdeo/Recruitment-Portal) [![GMAIL](https://img.shields.io/static/v1.svg?label=send&message=vinitshahdeo@gmail.com&color=red&logo=gmail&style=social)](https://www.github.com/vinitshahdeo) 
 
