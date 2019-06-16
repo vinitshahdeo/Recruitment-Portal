@@ -32,7 +32,7 @@ include_once 'dbConnection.php';
 <div class="header">
 <div class="row">
 <div class="col-lg-6">
-<span class="logo">VinnovateIT Recruitmnets</span></div>
+<span class="logo">VinnovateIT Recruitments</span></div>
 <div class="col-md-4 col-md-offset-2">
  <?php
  include_once 'dbConnection.php';
