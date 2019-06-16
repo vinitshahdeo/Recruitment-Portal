@@ -501,4 +501,6 @@ echo '</table></div>';
 </div><!-- /.modal -->
 <!--footer end-->
 </body>
+<!-- Made with love by Vinit Shahdeo	-->
+
 </html>
