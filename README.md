@@ -16,12 +16,12 @@ VinnovateIT help the members to develop their projects both technically as well 
 
 ## Technology Stack Used
 
-![HTML](https://img.shields.io/badge/frontend-html-orange.svg?logo=html5) 
-![CSS](https://img.shields.io/badge/frontend-css-yellowgreen.svg?logo=css3)
-![JavaScript](https://img.shields.io/badge/frontend-js-ff69b4.svg?logo=javascript)
-![Bootstrap](https://img.shields.io/badge/framework-bootstrap-dodgerblue.svg?logo=bootstrap)
-![PHP](https://img.shields.io/badge/backend-php-blue.svg?logo=php) 
-![MYSQL](https://img.shields.io/badge/database-mysql-lightgray.svg?logo=mysql&logoColor=white) 
+![HTML](https://img.shields.io/badge/frontend-html-orange.svg?logo=html5&style=flat-square) 
+![CSS](https://img.shields.io/badge/frontend-css-yellowgreen.svg?logo=css3&style=flat-square)
+![JavaScript](https://img.shields.io/badge/frontend-js-ff69b4.svg?logo=javascript&style=flat-square)
+![Bootstrap](https://img.shields.io/badge/framework-bootstrap-dodgerblue.svg?logo=bootstrap&style=flat-square)
+![PHP](https://img.shields.io/badge/backend-php-blue.svg?logo=php&style=flat-square) 
+![MYSQL](https://img.shields.io/badge/database-mysql-lightgray.svg?logo=mysql&logoColor=white&style=flat-square) 
 
 - Front End - **HTML**, **CSS**, **JavaScript**
 - Framewrok - **[Bootstrap](https://getbootstrap.com/)**
