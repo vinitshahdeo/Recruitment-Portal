@@ -67,6 +67,16 @@ The source code of this project is written in **PHP**. So, you'll require **WAMP
 
 ## Need help?
 
+```javascript
+
+  if (needHelp === true) {
+     var emailId = "vinitshahdeo@gmail.com";
+     // email is the best way to reach out to me.
+     sendEmail(emailId);
+  }
+
+```
+
 Feel free to contact me via [Facebook](https://www.facebook.com/vinit.shahdeo).
 
 Invite me to connect on [LinkedIn](https://www.linkedin.com/in/vinitshahdeo/).
