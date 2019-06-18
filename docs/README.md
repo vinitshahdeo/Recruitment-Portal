@@ -82,7 +82,7 @@ Invite me to connect on [LinkedIn](https://www.linkedin.com/in/vinitshahdeo/).
 
 ## Oh, Thanks!
 
-```js
+```
  _______ _                 _        
 |__   __| |               | |       
    | |  | |__   __ _ _ __ | | _____ 
