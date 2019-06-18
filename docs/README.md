@@ -20,7 +20,7 @@ __     ___                             _       ___ _____
 [VinnovateIT](https://www.facebook.com/VinnovateIT/) is an OFFICIAL innovation and incubation lab of SITE School.
 VinnovateIT help the members to develop their projects both technically as well as budding entrepreneurs. It is a platform for the students to come up with innovative ideas where one can work on their areas of interest. It also provides an atmosphere of collaborative learning in those areas.
 
-![VinnovateIT Recruitment Portal](demo/vinnovateitgif.gif)
+![VinnovateIT Recruitment Portal](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/demo/vinnovateitgif.gif?raw=true)
 
 > Stay connected with VinnovateIT's [Facebook](https://www.facebook.com/VinnovateIT/) page.
 
