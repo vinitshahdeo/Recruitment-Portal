@@ -1,3 +1,14 @@
+
+```
+__     ___                             _       ___ _____ 
+\ \   / (_)_ __  _ __   _____   ____ _| |_ ___|_ _|_   _|
+ \ \ / /| | '_ \| '_ \ / _ \ \ / / _` | __/ _ \| |  | |  
+  \ V / | | | | | | | | (_) \ V / (_| | ||  __/| |  | |  
+   \_/  |_|_| |_|_| |_|\___/ \_/ \__,_|\__\___|___| |_|  
+                                                         
+```
+
+
 # [VinnovateIT](https://www.facebook.com/VinnovateIT/) - Recruitment Portal
 
 
@@ -9,19 +20,19 @@
 [VinnovateIT](https://www.facebook.com/VinnovateIT/) is an OFFICIAL innovation and incubation lab of SITE School.
 VinnovateIT help the members to develop their projects both technically as well as budding entrepreneurs. It is a platform for the students to come up with innovative ideas where one can work on their areas of interest. It also provides an atmosphere of collaborative learning in those areas.
 
-![VinnovateIT Recruitment Portal](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/demo/vinnovateitgif.gif)
+![VinnovateIT Recruitment Portal](demo/vinnovateitgif.gif)
 
 > Stay connected with VinnovateIT's [Facebook](https://www.facebook.com/VinnovateIT/) page.
 
 
 ## Technology Stack Used
 
-![HTML](https://img.shields.io/badge/frontend-html-orange.svg?logo=html5) 
-![CSS](https://img.shields.io/badge/frontend-css-yellowgreen.svg?logo=css3)
-![JavaScript](https://img.shields.io/badge/frontend-js-ff69b4.svg?logo=javascript)
-![Bootstrap](https://img.shields.io/badge/framework-bootstrap-dodgerblue.svg?logo=bootstrap)
-![PHP](https://img.shields.io/badge/backend-php-blue.svg?logo=php) 
-![MYSQL](https://img.shields.io/badge/database-mysql-lightgray.svg?logo=mysql&logoColor=white) 
+![HTML](https://img.shields.io/badge/frontend-html-orange.svg?logo=html5&style=flat-square) 
+![CSS](https://img.shields.io/badge/frontend-css-yellowgreen.svg?logo=css3&style=flat-square)
+![JavaScript](https://img.shields.io/badge/frontend-js-ff69b4.svg?logo=javascript&style=flat-square)
+![Bootstrap](https://img.shields.io/badge/framework-bootstrap-dodgerblue.svg?logo=bootstrap&style=flat-square)
+![PHP](https://img.shields.io/badge/backend-php-blue.svg?logo=php&style=flat-square) 
+![MYSQL](https://img.shields.io/badge/database-mysql-lightgray.svg?logo=mysql&logoColor=white&style=flat-square) 
 
 - Front End - **HTML**, **CSS**, **JavaScript**
 - Framewrok - **[Bootstrap](https://getbootstrap.com/)**
@@ -70,6 +81,17 @@ Invite me to connect on [LinkedIn](https://www.linkedin.com/in/vinitshahdeo/).
 **MIT &copy; [Vinit Shahdeo](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/LICENSE)**
 
 ## Oh, Thanks!
+
+```js
+ _______ _                 _        
+|__   __| |               | |       
+   | |  | |__   __ _ _ __ | | _____ 
+   | |  | '_ \ / _` | '_ \| |/ / __|
+   | |  | | | | (_| | | | |   <\__ \
+   |_|  |_| |_|\__,_|_| |_|_|\_\___/
+                                    
+                                    
+```
 
 Thank you for being here! Show some love by [starring](https://github.com/vinitshahdeo/Recruitment-Portal/) this repo.
 
