@@ -1,3 +1,11 @@
+![VinnovateIT logo](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/image/vinnovateit.png)
+
+# [VinnovateIT](https://www.facebook.com/VinnovateIT/) - Recruitment Portal
+
+
+### An online recruitment portal developed for recruitments of [VinnovateIT](https://vinnovateit.com/).
+
+[![GitHub repo size](https://img.shields.io/github/repo-size/vinitshahdeo/Recruitment-Portal.svg?logo=github&style=social)](https://vinitshahdeo.github.io/Recruitment-Portal/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/vinitshahdeo/Recruitment-Portal.svg?logo=git&style=social)](https://vinitshahdeo.github.io/Recruitment-Portal/) [![GitHub license](https://img.shields.io/github/license/vinitshahdeo/Recruitment-Portal.svg?style=social&logo=github)](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/LICENSE)
 
 ```
 __     ___                             _       ___ _____ 
@@ -7,15 +15,6 @@ __     ___                             _       ___ _____
    \_/  |_|_| |_|_| |_|\___/ \_/ \__,_|\__\___|___| |_|  
                                                          
 ```
-
-
-# [VinnovateIT](https://www.facebook.com/VinnovateIT/) - Recruitment Portal
-
-
-### An online recruitment portal developed for recruitments of [VinnovateIT](https://vinnovateit.com/).
-
-[![GitHub repo size](https://img.shields.io/github/repo-size/vinitshahdeo/Recruitment-Portal.svg?logo=github&style=social)](https://vinitshahdeo.github.io/Recruitment-Portal/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/vinitshahdeo/Recruitment-Portal.svg?logo=git&style=social)](https://vinitshahdeo.github.io/Recruitment-Portal/) [![GitHub license](https://img.shields.io/github/license/vinitshahdeo/Recruitment-Portal.svg?style=social&logo=github)](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/LICENSE)
-
 
 [VinnovateIT](https://www.facebook.com/VinnovateIT/) is an OFFICIAL innovation and incubation lab of SITE School.
 VinnovateIT help the members to develop their projects both technically as well as budding entrepreneurs. It is a platform for the students to come up with innovative ideas where one can work on their areas of interest. It also provides an atmosphere of collaborative learning in those areas.
