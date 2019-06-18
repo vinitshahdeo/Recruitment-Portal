@@ -82,18 +82,53 @@ Invite me to connect on [LinkedIn](https://www.linkedin.com/in/vinitshahdeo/).
 
 ## Oh, Thanks!
 
-```js
- _______ _                 _        
-|__   __| |               | |       
-   | |  | |__   __ _ _ __ | | _____ 
-   | |  | '_ \ / _` | '_ \| |/ / __|
-   | |  | | | | (_| | | | |   <\__ \
-   |_|  |_| |_|\__,_|_| |_|_|\_\___/
-                                    
-                                    
+```bash
+
+
+
+ _____ _                 _     __   __            
+|_   _| |               | |    \ \ / /            
+  | | | |__   __ _ _ __ | | __  \ V /___  _   _   
+  | | | '_ \ / _` | '_ \| |/ /   \ // _ \| | | |  
+  | | | | | | (_| | | | |   <    | | (_) | |_| |  
+  \_/ |_| |_|\__,_|_| |_|_|\_\   \_/\___/ \__,_|  
+                                                  
+                                                  
+______                                            
+|  ___|                                           
+| |_ ___  _ __                                    
+|  _/ _ \| '__|                                   
+| || (_) | |                                      
+\_| \___/|_|                                      
+                                                  
+                                                  
+______      _               _   _               _ 
+| ___ \    (_)             | | | |             | |
+| |_/ / ___ _ _ __   __ _  | |_| | ___ _ __ ___| |
+| ___ \/ _ \ | '_ \ / _` | |  _  |/ _ \ '__/ _ \ |
+| |_/ /  __/ | | | | (_| | | | | |  __/ | |  __/_|
+\____/ \___|_|_| |_|\__, | \_| |_/\___|_|  \___(_)
+                     __/ |                        
+                    |___/                         
+
+ 
+
+
 ```
 
-Thank you for being here! Show some love by [starring](https://github.com/vinitshahdeo/Recruitment-Portal/) this repo.
+***Glad to see you here! Show some love by [starring](https://github.com/vinitshahdeo/Recruitment-Portal/) this repo.***
 
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/vinitshahdeo/Recruitment-Portal.svg?style=social)](https://twitter.com/intent/tweet?text=Recruitment%20Portal%20by@Vinit_Shahdeo%20:&url=https://github.com/vinitshahdeo/Recruitment-Portal) [![GMAIL](https://img.shields.io/static/v1.svg?label=send&message=vinitshahdeo@gmail.com&color=red&logo=gmail&style=social)](https://www.github.com/vinitshahdeo) 
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/vinitshahdeo/Recruitment-Portal.svg?style=social)](https://twitter.com/intent/tweet?text=Recruitment%20Portal%20by@Vinit_Shahdeo%20:&url=https://github.com/vinitshahdeo/Recruitment-Portal) [![GMAIL](https://img.shields.io/static/v1.svg?label=send&message=vinitshahdeo@gmail.com&color=red&logo=gmail&style=social)](https://www.github.com/vinitshahdeo)
 
+-----
+
+```javascript
+
+  if (isAwesome) {
+    // thanks in advance :p
+    starThisRepository();
+  }
+
+```
+
+******
