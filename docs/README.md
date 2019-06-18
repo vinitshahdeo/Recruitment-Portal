@@ -1,4 +1,4 @@
-![VinnovateIT logo](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/image/vinnovateit.png)
+![VinnovateIT logo](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/image/vinnovateit.png?raw=true)
 
 # [VinnovateIT](https://www.facebook.com/VinnovateIT/) - Recruitment Portal
 
