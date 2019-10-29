@@ -87,9 +87,12 @@ Invite me to connect on [LinkedIn](https://www.linkedin.com/in/vinitshahdeo/).
 
 ## License
 
-[![GitHub license](https://img.shields.io/github/license/vinitshahdeo/Recruitment-Portal.svg?style=social&logo=github)](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/LICENSE) [![Author](https://img.shields.io/static/v1.svg?label=Author&message=@vinitshahdeo&logo=github&style=social)](https://github.com/vinitshahdeo)
+[![Vinit Shahdeo](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/0)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/0)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/1)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/1)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/2)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/2)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/3)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/3)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/4)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/4)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/5)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/5)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/6)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/6)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/7)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/7)
 
 **MIT &copy; [Vinit Shahdeo](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/LICENSE)**
+
+[![GitHub license](https://img.shields.io/github/license/vinitshahdeo/Recruitment-Portal.svg?style=social&logo=github)](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/LICENSE) [![Author](https://img.shields.io/static/v1.svg?label=Author&message=@vinitshahdeo&logo=github&style=social)](https://github.com/vinitshahdeo)
+
 
 ## Oh, Thanks!
 
