@@ -99,6 +99,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
 <!--home start-->
 
 <?php if(@$_GET['q']==0) {
+$_SESSION['quizTimeRemaining'] = -1;
 
 $result = mysqli_query($con,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
 echo  '<div class="panel"><table class="table table-striped title1">
