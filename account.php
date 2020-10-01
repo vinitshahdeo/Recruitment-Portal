@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +17,7 @@
  <link  rel="stylesheet" href="css/font.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <script src="js/jquery.js" type="text/javascript"></script>
+ <script src="js/timer.js"></script>
 
  
   <script src="js/bootstrap.min.js"  type="text/javascript"></script>
@@ -34,9 +38,13 @@ include_once 'dbConnection.php';
 <div class="col-lg-6">
 <span class="logo">VinnovateIT Recruitments</span></div>
 <div class="col-md-4 col-md-offset-2">
- <?php
+<?php
  include_once 'dbConnection.php';
-session_start();
+
+  if(!isset($_SESSION['quizTimeRemaining']))
+  {
+    $_SESSION['quizTimeRemaining'] = -1;
+  }
   if(!(isset($_SESSION['email']))){
 header("location:index.php");
 
@@ -48,7 +56,9 @@ $email=$_SESSION['email'];
 
 include_once 'dbConnection.php';
 echo '<span class="pull-right top title1" ><span class="log1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <a href="account.php?q=1" class="log log1">'.$name.'</a>&nbsp;|&nbsp;<a href="logout.php?q=account.php" class="log"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Signout</button></a></span>';
-}?>
+}
+
+?>
 </div>
 </div></div>
 <div class="bg">
@@ -88,7 +98,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
 
 <!--home start-->
 <?php if(@$_GET['q']==1) {
-
+$_SESSION['quizTimeRemaining'] = -1;
 $result = mysqli_query($con,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
 echo  '<div class="panel"><table class="table table-striped title1">
 <tr><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Marks</b></td><td><b>Time limit</b></td><td></td></tr>';
@@ -114,56 +124,89 @@ echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title
 $c=0;
 echo '</table></div>';
 
-}?>
-<!--<span id="countdown" class="timer"></span>
-<script>
-var seconds = 40;
-    function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds; 
-    }
-    document.getElementById('countdown').innerHTML = minutes + ":" +    remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Buzz Buzz";
-    } else {    
-        seconds--;
-    }
-    }
-var countdownTimer = setInterval('secondPassed()', 1000);
-</script>-->
-
+}
+?>
 <!--home closed-->
 
 <!--quiz start-->
-<?php
-if(@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
-$eid=@$_GET['eid'];
-$sn=@$_GET['n'];
-$total=@$_GET['t'];
-$q=mysqli_query($con,"SELECT * FROM questions WHERE eid='$eid' AND sn='$sn' " );
-echo '<div class="panel" style="margin:5%">';
-while($row=mysqli_fetch_array($q) )
-{
-$qns=$row['qns'];
-$qid=$row['qid'];
-echo '<b>Question &nbsp;'.$sn.'&nbsp;::<br />'.$qns.'</b><br /><br />';
-}
-$q=mysqli_query($con,"SELECT * FROM options WHERE qid='$qid' " );
-echo '<form action="update.php?q=quiz&step=2&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST"  class="form-horizontal">
-<br />';
 
-while($row=mysqli_fetch_array($q) )
+
+<?php
+if(@$_GET['q']== 'quiz' && @$_GET['step']== 2) 
 {
-$option=$row['option'];
-$optionid=$row['optionid'];
-echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br />';
-}
-echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
+  echo' <div class="questionWrapper" style="margin:5%">';
+
+  $eid = mysqli_real_escape_string($con,stripslashes(strip_tags($_GET['eid'])));
+  $query = mysqli_query($con,"SELECT * FROM quiz WHERE eid = '".$eid."'") or die('Error');
+  $result = mysqli_fetch_array($query);
+
+  if($_SESSION['quizTimeRemaining'] < 0)
+  {
+    $timeInSeconds = intval($result['time']) * 60;
+    $_SESSION['quizTimeRemaining'] = $timeInSeconds;
+  }
+  else
+  {
+    $timeInSeconds = $_SESSION['quizTimeRemaining'];
+  }
+  /* Dummy needed for async $_SESSION['quizTimeRemaining'] updates */
+  echo'<div id="quizTimeRemainingUpdater" style="display:none"></div>';
+
+  /* Quiz time left display */
+  echo'
+  <div id="quizTimerWrapper" class="panel">
+    <center><span id="countdown" class="timer"></span></center>
+  </div>
+';
+
+  $eid=$result['eid'];
+  $total=$result['total'];
+  $sn=@$_GET['n'];
+  $sn = stripslashes($sn);
+  $sn = strip_tags($sn);
+
+  $q=mysqli_query($con,"SELECT * FROM questions WHERE eid='$eid' AND sn='$sn' " );
+
+  echo '<div id="quizPanel" class="panel">';
+
+
+  while($row=mysqli_fetch_array($q) )
+  {
+    $qns=$row['qns'];
+    $qid=$row['qid'];
+    echo '<b>Question &nbsp;'.$sn.'&nbsp;::<br />'.$qns.'</b><br /><br />';
+  }
+
+  $q=mysqli_query($con,"SELECT * FROM options WHERE qid='$qid' " );
+  echo '<form action="update.php?q=quiz&step=2&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST"  class="form-horizontal">
+  <br />';
+
+  while($row=mysqli_fetch_array($q) )
+  {
+    $option=$row['option'];
+    $optionid=$row['optionid'];
+    echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br />';
+  }
+  echo' <input id="quizTimeRemainingInput" type="hidden" name="timeRemaining" value="'.$timeInSeconds.'">';
+
+  echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
+  
+  /*Close Question Wrapper */
+  echo '</div>';
+
+  /* Start Timer as soon as we have loaded the question */
+  echo'
+  <script>
+  var seconds = '.$timeInSeconds.';
+  var eid = "'.$eid.'";
+  secondPassed();
+  var countdownTimer = setInterval("secondPassed()", 1000);
+  </script>
+  ';
 //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
+
+
 //result display
 if(@$_GET['q']== 'result' && @$_GET['eid']) 
 {
