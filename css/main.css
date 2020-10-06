@@ -149,3 +149,21 @@ border-top:2px solid;
 border-color:orange;
 text-decoration:none;
 }
+
+.timerblock{
+    float: right;
+    margin-right: 5%;
+    background: #1DE9B6;
+    padding: 10px;
+}
+
+.timerblock .timeralert{
+    background: #F44336;
+}
+
+
+.timerblock span{
+    font-size: 18px;
+    font-weight: bold;
+    width: 20px;
+}

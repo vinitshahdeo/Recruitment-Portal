@@ -7,6 +7,6 @@ $row=mysql_fetch_array($session);
 $login_session=$row['username'];
 if(!isset($login_session))
 {
-header("Location:index.php");
+    header("Location:index.php");
 }
 ?>

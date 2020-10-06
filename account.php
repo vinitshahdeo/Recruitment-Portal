@@ -97,7 +97,7 @@ while($row = mysqli_fetch_array($result)) {
 	$title = $row['title'];
 	$total = $row['total'];
 	$sahi = $row['sahi'];
-    $time = $row['time'];
+  $time = $row['time'];
 	$eid = $row['eid'];
 $q12=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error98');
 $rowcount=mysqli_num_rows($q12);	
@@ -115,25 +115,10 @@ $c=0;
 echo '</table></div>';
 
 }?>
-<!--<span id="countdown" class="timer"></span>
-<script>
-var seconds = 40;
-    function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds; 
-    }
-    document.getElementById('countdown').innerHTML = minutes + ":" +    remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Buzz Buzz";
-    } else {    
-        seconds--;
-    }
-    }
-var countdownTimer = setInterval('secondPassed()', 1000);
-</script>-->
+
+<div class="timerblock">
+Time Remaining : <span id="countdown" class="timer"></span>
+</div>
 
 <!--home closed-->
 
@@ -296,7 +281,7 @@ echo '</table></div>';}
 </div><!-- /.modal -->
 
 <!--Modal for admin login-->
-	 <div class="modal fade" id="login">
+	<div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -304,21 +289,21 @@ echo '</table></div>';}
         <h4 class="modal-title"><span style="color:orange;font-family:'typo' ">LOGIN</span></h4>
       </div>
       <div class="modal-body title1">
-<div class="row">
-<div class="col-md-3"></div>
-<div class="col-md-6">
-<form role="form" method="post" action="admin.php?q=index.php">
-<div class="form-group">
-<input type="text" name="uname" maxlength="20"  placeholder="Admin user id" class="form-control"/> 
-</div>
-<div class="form-group">
-<input type="password" name="password" maxlength="15" placeholder="Password" class="form-control"/>
-</div>
-<div class="form-group" align="center">
-<input type="submit" name="login" value="Login" class="btn btn-primary" />
-</div>
-</form>
-</div><div class="col-md-3"></div></div>
+        <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <form role="form" method="post" action="admin.php?q=index.php">
+        <div class="form-group">
+        <input type="text" name="uname" maxlength="20"  placeholder="Admin user id" class="form-control"/> 
+        </div>
+        <div class="form-group">
+        <input type="password" name="password" maxlength="15" placeholder="Password" class="form-control"/>
+        </div>
+        <div class="form-group" align="center">
+        <input type="submit" name="login" value="Login" class="btn btn-primary" />
+        </div>
+        </form>
+        </div><div class="col-md-3"></div></div>
       </div>
       <!--<div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -326,7 +311,86 @@ echo '</table></div>';}
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
+<!--Modal for Timeups-->
+<div class="modal fade" id="timeup">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 class="modal-title"><span style="color:orange;font-family:'typo' ">Time's up</span></h4>
+      </div>
+      <div class="modal-body title1">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center">Buzz Buzz... Time's up</h2>
+            <br>
+            <div class="text-center">
+                <a href="account.php?q=result&eid=<?php @$_GET['eid'];?>" class="btn btn-success">View Result</a>
+            </div>
+
+          </div>         
+        </div>
+      </div>      
+    </div> 
+  </div> 
+</div> 
+
+
+
 <!--footer end-->
+
+<?php 
+  //Check if it's first question and countdown has initialized
+   $timleft=isset($_SESSION['countdown'])?$_SESSION['countdown']:0;
+   $result=isset($_SESSION['result'])?$_SESSION['result']:0;
+   
+   if(isset($_SESSION['result'])){
+     unset($_SESSION['result']);
+   }
+   
+   if(@$_GET['n']==1 && empty($timleft)){
+    $timleft=@$_GET['t']*60;  
+    $_SESSION['countdown']=$timleft;
+  }else if(isset($_SESSION['countdown'])){
+    $timleft=$_SESSION['countdown'];
+  }
+  ?>
+<script>
+    var seconds = <?php echo $timleft;?>;
+    var result= <?php  echo $result;?>;
+    function secondPassed() {
+      var minutes = Math.round((seconds - 30)/60);
+      var remainingSeconds = seconds % 60;
+      if (remainingSeconds < 10) {
+          remainingSeconds = "0" + remainingSeconds; 
+      }
+      document.getElementById('countdown').innerHTML = minutes + ":" +    remainingSeconds;
+
+      if(minutes<1){
+        $('.timerblock').addClass('timeralert');
+      }
+      if (seconds == 0) {
+          clearInterval(countdownTimer);
+          $.post('update.php', { q:'stoptimer'});           
+          if(result==0){
+            $('#timeup').modal({
+                show: 'true',
+                backdrop: 'static',
+                keyboard: false
+            }); 
+          }
+          //document.getElementById('countdown').innerHTML = "Buzz Buzz... Time's up";
+      } else {    
+          seconds--;
+          //Update countdown session
+          $.post('update.php', { q:'updatetimer',countdown:seconds });
+      }
+     
+    }
+  
+    var countdownTimer = setInterval('secondPassed()', 1000);
+</script>
 
 <!--
 
@@ -354,9 +418,7 @@ echo '</table></div>';}
                                                                                                
 
 
--->
-
-
+--> 
 
 </body>
 </html>
