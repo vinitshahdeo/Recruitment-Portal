@@ -87,11 +87,16 @@ Invite me to connect on [LinkedIn](https://www.linkedin.com/in/vinitshahdeo/).
 
 ## License
 
-[![Vinit Shahdeo](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/0)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/0)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/1)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/1)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/2)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/2)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/3)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/3)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/4)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/4)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/5)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/5)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/6)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/6)[![](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/images/7)](https://sourcerer.io/fame/vinitshahdeo/vinitshahdeo/Recruitment-Portal/links/7)
-
 **MIT &copy; [Vinit Shahdeo](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/LICENSE)**
 
 [![GitHub license](https://img.shields.io/github/license/vinitshahdeo/Recruitment-Portal.svg?style=social&logo=github)](https://github.com/vinitshahdeo/Recruitment-Portal/blob/master/LICENSE) [![Author](https://img.shields.io/static/v1.svg?label=Author&message=@vinitshahdeo&logo=github&style=social)](https://github.com/vinitshahdeo)
+
+## Author
+
+|                                                                                         <a href="https://www.eatmy.news/2020/06/code-like-you-eat-i-mean-code-daily-as.html"><img src="https://raw.githubusercontent.com/vinitshahdeo/Water-Monitoring-System/master/assets/vinit-shahdeo.jpg" width="150px " height="150px" /></a>                                                                                         |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                                                        **[Vinit Shahdeo](https://fayz.in/stories/s/1522/0/?ckt_id=ZGL1ZGVk&title=story_of_vinit_shahdeo)**                                                                                                                                        |
+| <a href="https://twitter.com/Vinit_Shahdeo"><img src="https://raw.githubusercontent.com/vinitshahdeo/Water-Monitoring-System/master/assets/twitter.png" width="32px" height="32px"></a> <a href="https://www.facebook.com/vinit.shahdeo"><img src="https://raw.githubusercontent.com/vinitshahdeo/Water-Monitoring-System/master/assets/facebook.png" width="32px" height="32px"></a> <a href="https://www.linkedin.com/in/vinitshahdeo/"><img src="https://raw.githubusercontent.com/vinitshahdeo/Water-Monitoring-System/master/assets/linkedin.png" width="32px" height="32px"></a> |
 
 
 ## Oh, Thanks!
