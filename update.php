@@ -199,7 +199,10 @@ else
 header("location:account.php?q=result&eid=$eid");
 }
 }
-
+//set time session
+if(@$_POST['q']=='timeUpdate' && @$_POST['timeLeft']) {
+    $_SESSION['timeLeft']=$_POST['timeLeft'];
+}
 //restart quiz
 if(@$_GET['q']== 'quizre' && @$_GET['step']== 25 ) {
 $eid=@$_GET['eid'];

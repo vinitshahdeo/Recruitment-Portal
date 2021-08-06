@@ -115,25 +115,43 @@ $c=0;
 echo '</table></div>';
 
 }?>
-<!--<span id="countdown" class="timer"></span>
-<script>
-var seconds = 40;
-    function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds; 
-    }
-    document.getElementById('countdown').innerHTML = minutes + ":" +    remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Buzz Buzz";
-    } else {    
-        seconds--;
-    }
-    }
-var countdownTimer = setInterval('secondPassed()', 1000);
-</script>-->
+<span id="countdown" class="timer"></span>
+<span id="countdown_alert" class="text-danger"></span>
+<?php if(isset($_SESSION['timeLeft'])) {
+    if(@$_GET['q']=='quiz' && @$_GET['step']==2){
+        $eid=@$_GET['eid'];
+        $sn=@$_GET['n'];
+        if($sn==1){
+            $q=mysqli_query($con, "SELECT time FROM quiz WHERE eid='$eid'");
+            $r=mysqli_fetch_assoc($q);
+            $_SESSION['timeLeft']=$r['time']*60;
+        }
+    ?>
+    <script>
+        var seconds = <?php echo $_SESSION['timeLeft'] ?>;
+        function secondPassed() {
+            var minutes = Math.round((seconds - 30)/60);
+            var remainingSeconds = seconds % 60;
+            if (remainingSeconds < 10) {
+                remainingSeconds = "0" + remainingSeconds;
+            }
+            document.getElementById('countdown').innerHTML = minutes + ":" +    remainingSeconds;
+            if(minutes<2) {
+                document.getElementById('countdown_alert').innerHTML = "<br>Hurry up!! Less than 2 minutes left.";
+            }
+            if (seconds == 0) {
+                clearInterval(countdownTimer);
+                document.getElementById('countdown').innerHTML = "Buzz Buzz";
+                document.getElementById('submitBtn').style.display = 'none';
+                document.getElementById('countdown_alert').innerHTML = "<br>You did not get it on time, please try again!";
+            } else {
+                seconds--;
+                $.post('update.php', { timeLeft: seconds, q: 'timeUpdate' });
+            }
+        }
+        var countdownTimer = setInterval('secondPassed()', 1000);
+    </script>
+<?php } } ?>
 
 <!--home closed-->
 
@@ -161,7 +179,7 @@ $option=$row['option'];
 $optionid=$row['optionid'];
 echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br />';
 }
-echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
+echo'<br /><button type="submit" id="submitBtn" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
 //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
 //result display
