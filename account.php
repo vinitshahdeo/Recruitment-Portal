@@ -115,7 +115,30 @@ $c=0;
 echo '</table></div>';
 
 }?>
-<!--<span id="countdown" class="timer"></span>
+
+<span id="countdown"></span>
+<script>
+  var sec=59;
+  function settimer(){
+    var remainsec=sec;
+    var remainmin=Math.floor((sec/60))%60;
+    if(remainsec<10){
+      remainsec = "0" + remainsec;
+    }
+    document.getElementById('countdown').innerHTML = remainmin + ":" + remainsec;
+    if(remainsec==0)
+    {
+      var button=document.getElementById('sub');
+      button.form.submit();
+    }
+    else
+    {
+      sec--;
+    }
+  }
+  var countdown=setInterval('settimer()',1000);
+</script>
+<!-- <span id="countdown" class="timer"></span>
 <script>
 var seconds = 40;
     function secondPassed() {
@@ -133,7 +156,7 @@ var seconds = 40;
     }
     }
 var countdownTimer = setInterval('secondPassed()', 1000);
-</script>-->
+</script> -->
 
 <!--home closed-->
 
@@ -161,7 +184,7 @@ $option=$row['option'];
 $optionid=$row['optionid'];
 echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br />';
 }
-echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
+echo'<br /><button type="submit" class="btn btn-primary" id="sub"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
 //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
 //result display
