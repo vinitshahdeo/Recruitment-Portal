@@ -221,4 +221,15 @@ $q=mysqli_query($con,"UPDATE `rank` SET `score`=$sun ,time=NOW() WHERE email= '$
 header("location:account.php?q=quiz&step=2&eid=$eid&n=1&t=$t");
 }
 
+//update countdown
+if(@$_POST['q']=='updatetimer' && isset($_POST['countdown'])) {
+  $_SESSION['countdown']=$_POST['countdown'];
+}
+
+//Destroy session
+if(@$_POST['q']=='stoptimer' && isset($_SESSION['countdown'])) {
+  $_SESSION['result']=1;
+  unset($_SESSION['countdown']);
+}
+
 ?>
