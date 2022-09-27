@@ -121,8 +121,14 @@ if (!(isset($_SESSION['email']))) {
 
 <script>
   var urlParams = new URLSearchParams(window.location.href);
-    var duration = urlParams.get('time'); // Time set in Seconds
-    var time = 5;//Math.round(duration*60); 
+    var duration = urlParams.get('time'); // Time set in Minutes
+    var startQuiz = urlParams.get('step');
+    var status = urlParams.get('q');
+    
+    if(startQuiz == 2){
+
+    
+    var time = 40; //Math.round(duration*60); 
 
  
     var saved_countdown = localStorage.getItem('saved_countdown');
@@ -162,7 +168,7 @@ if (!(isset($_SESSION['email']))) {
         }
     }, 1000);
 
-
+  }
 </script>
 
 <!--home closed-->
