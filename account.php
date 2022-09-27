@@ -125,10 +125,9 @@ if (!(isset($_SESSION['email']))) {
     var startQuiz = urlParams.get('step');
     var status = urlParams.get('q');
     
-    if(startQuiz == 2){
-
+   
     
-    var time = 40; //Math.round(duration*60); 
+    var time = <?php echo (@$_GET['time']);?> //Math.round(duration*60); 
 
  
     var saved_countdown = localStorage.getItem('saved_countdown');
@@ -168,7 +167,7 @@ if (!(isset($_SESSION['email']))) {
         }
     }, 1000);
 
-  }
+  
 </script>
 
 <!--home closed-->
