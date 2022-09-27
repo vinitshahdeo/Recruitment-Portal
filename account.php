@@ -106,10 +106,10 @@ if (!(isset($_SESSION['email']))) {
         $rowcount=mysqli_num_rows($q12);
         if ($rowcount == 0) {
             echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
-	<td><b><a href="account.php?q=quiz&step=2&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:#99cc32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Start</b></span></a></b></td></tr>';
+	<td><b><a href="account.php?q=quiz&step=2&eid='.$eid.'&n=1&t='.$total.'&time='.$time.'" class="pull-right btn sub1" style="margin:0px;background:#99cc32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Start</b></span></a></b></td></tr>';
         } else {
             echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
-	<td><b><a href="update.php?q=quizre&step=25&eid='.$eid.'&n=1&t='.$total.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Restart</b></span></a></b></td></tr>';
+	<td><b><a href="update.php?q=quizre&step=25&eid='.$eid.'&n=1&t='.$total.'&time='.$time.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Restart</b></span></a></b></td></tr>';
         }
     }
     $c=0;
@@ -117,29 +117,52 @@ if (!(isset($_SESSION['email']))) {
 }?>
 
 
-<button id="countdown"  class="btn btn-warning timer">countdown begins</button>
+<button id="demo" class="btn btn-warning timer">countdown begins</button>
 
 <script>
-var seconds = 10;
-    function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {    
+  var urlParams = new URLSearchParams(window.location.href);
+    var duration = urlParams.get('time'); // Time set in Seconds
+    var time = 5;//Math.round(duration*60); 
 
-       // remainingSeconds = "0" + remainingSeconds; 
-      
+ 
+    var saved_countdown = localStorage.getItem('saved_countdown');
+
+    if(saved_countdown == null) {
+        // Set the time we're counting down to using the time allowed
+        var new_countdown = new Date().getTime() + (time + 2) * 1000;
+
+        time = new_countdown;
+        localStorage.setItem('saved_countdown', new_countdown);
+    } else {
+        time = saved_countdown;
     }
-    document.getElementById('countdown').innerHTML = minutes + ":" +    remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('time_up').submit();
-       
-        //document.getElementById('countdown').innerHTML = "Buzz Buzz";
-    } else {    
-        seconds--;
-    }
-    }
-var countdownTimer = setInterval('secondPassed()', 1000);
+
+    // Update the count down every 1 second
+    var x = setInterval(() => {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the allowed time
+        var distance = time - now;
+
+        // Time counter
+        var counter = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = counter + " s";
+            
+        // If the count down is over, write some text 
+        if (counter <= 0) {
+            clearInterval(x);
+            localStorage.removeItem('saved_countdown');
+            document.getElementById("demo").innerHTML = "TIME UP";
+            document.getElementById('time_up').submit();
+            
+        }
+    }, 1000);
+
+
 </script>
 
 <!--home closed-->
@@ -170,7 +193,7 @@ if (@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
     //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 
     //Form for time up
-    echo '<form id="time_up" action="update.php?q=quiz&step=2&time_up=1&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST">';
+    echo '<form id="time_up" action="time_up.php?q=quiz&step=2&time_up=1&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST">';
     //time up from ends here
 
 
@@ -178,6 +201,7 @@ if (@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
 }
 //result display
 if (@$_GET['q']== 'result' && @$_GET['eid']) {
+ echo "<script>document.getElementById('demo').style.display='none';</script>";
     $eid=@$_GET['eid'];
     $q=mysqli_query($con, "SELECT * FROM history WHERE eid='$eid' AND email='$email' ")or die('Error157');
     echo  '<div class="panel">

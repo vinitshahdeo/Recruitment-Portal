@@ -113,6 +113,7 @@ if (@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
     $total=@$_GET['t'];
     $ans=$_POST['ans'];
     $qid=@$_GET['qid'];
+    $time=@$_GET['time'];
     $q=mysqli_query($con, "SELECT * FROM answer WHERE qid='$qid' ");
     while ($row=mysqli_fetch_array($q)) {
         $ansid=$row['ansid'];
@@ -176,9 +177,9 @@ if (@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
             $sun=$s+$sun;
             $q=mysqli_query($con, "UPDATE `rank` SET `score`=$sun ,time=NOW() WHERE email= '$email'")or die('Error174');
         }
-        header("location:account.php?q=result&eid=$eid");
+        header("location:account.php?q=result&eid=$eid&time=$time");
     } else {
-        header("location:account.php?q=result&eid=$eid");
+        header("location:account.php?q=result&eid=$eid&time=$time");
     }
 }
 
@@ -187,6 +188,7 @@ if (@$_GET['q']== 'quizre' && @$_GET['step']== 25) {
     $eid=@$_GET['eid'];
     $n=@$_GET['n'];
     $t=@$_GET['t'];
+    $time=@$_GET['time'];
     $q=mysqli_query($con, "SELECT score FROM history WHERE eid='$eid' AND email='$email'")or die('Error156');
     while ($row=mysqli_fetch_array($q)) {
         $s=$row['score'];
@@ -198,7 +200,7 @@ if (@$_GET['q']== 'quizre' && @$_GET['step']== 25) {
     }
     $sun=$sun-$s;
     $q=mysqli_query($con, "UPDATE `rank` SET `score`=$sun ,time=NOW() WHERE email= '$email'")or die('Error174');
-    header("location:account.php?q=quiz&step=2&eid=$eid&n=1&t=$t");
+    header("location:account.php?q=quiz&step=2&eid=$eid&n=1&t=$t&time=$time");
 }
 
 
@@ -206,8 +208,3 @@ if (@$_GET['q']== 'quizre' && @$_GET['step']== 25) {
 
 
 
-// If Time is Up
-if (@$_GET['q']== 'quiz' && @$_GET['step']== 2 && @$_GET['time_up']== 1) {
-  echo "Good Morning";
-
-}
